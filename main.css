@@ -27,9 +27,13 @@ html {
 body {
     background: url(/myPortfolio/img/mainbg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100vh;
+    /* height: 100vh; */
     color: var(--text-color);
-    
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* 헤더영역 */
@@ -129,7 +133,7 @@ section {
     background: transparent;
     border: 2px solid var(--main-color);
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 28px;
     color: var(--main-color);
     z-index: 1;
     overflow: hidden;
@@ -155,43 +159,203 @@ section {
     width: 100%;
 }
 
+.home-img img {
+    position: relative;
+    width: 55rem;
+    height: 70rem;
+    left: 50px;
+}
 
+/* about 영역 */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    /* background: var(--second-gb-color); */
+    background: url(/myPortfolio/img/mainbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    padding-bottom: 6rem;
+}
 
+span {
+    color: var(--main-color);
+}
 
+.about-Title {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
 
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.about-img img {
+    object-fit: contain;
+    background-color: var(--second-gb-color);
+    /* opacity: 0.8; */
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+}
 
+.about-img .circle-spin {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(0);
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    border-top: .2rem solid #2E2E2E;
+    border-bottom: .2rem solid #2E2E2E;
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
 
+.about-contents {
+    text-align: center;
+}
 
+.about-contents h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+}
 
+.about-contents p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
 
+.btn-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 120rem;
+    height: 5rem;
+}
 
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--gb-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
 
+.btn-box .btn:nth-child(1) {
+    background: transparent;
+    color: var(--main-color);
+}
 
+.btn-box .btn:nth-child(1):hover {
+    color: var(--second-gb-color);
+}
 
+.btn-box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
 
+.btn-box .btn:hover::before {
+    width: 100%;
+}
 
+.btn-box .btns {
+    display: inline-block;
+    width: 15rem;
+}
 
+/* 스킬부분 */
+.skills {
+    background: url(./img/mainbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    /* min-height: auto; */
+    padding-bottom: 7rem;
+}
 
+.skills .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
 
+.skills .skills-column {
+    flex: 1 1;
+}
 
+.skills-column .title {
+    font-size: 3rem;
+    margin: 0 0 1.5rem;
+}
 
+.skills-box .skills-contents {
+    position: relative;
+    border: .5rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+}
 
+.skills-contents .skill-name {
+    padding: 1rem 0;
+}
 
+.skills-contents .skill-name h3 {
+    font-size: 3rem;
+    display: flex;
+}
 
+.skills-contents .skill-name i {
+    position: relative;
+    top: 7px;
+    left: 7px;
+}
 
+/* 프로젝트 부분*/
+.portfolio {
+    background: url(./img/mainbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+/* footer 부분 */
+.footer {
+    background: url(./img/mainbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
 
 
 
