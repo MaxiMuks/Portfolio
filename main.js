@@ -19,7 +19,30 @@ window.onscroll = () => {
     });
 
 
-    let header = document.querySelector('header');
     // 상단 메뉴바 고정
+    let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
+
+
+
 }
+
+// 새로고침 gif
+const loader = document.querySelector('.loader-container');
+
+window.addEventListener('load', () => {
+    loader.style.display = 'none';
+});
+
+// ScrollReveal
+ScrollReveal({ 
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .about-Title', {origin: 'top'});
+ScrollReveal().reveal('.home-img, .about-contents, .skills-column, .project-box', {origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1', {origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-contents h3', {origin: 'right'});

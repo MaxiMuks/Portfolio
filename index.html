@@ -13,6 +13,10 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <div class="loader-container">
+        <img src="./img/라이언.gif" alt="">
+    </div>
+
     <!-- 헤더영역 -->
     <header class="header">
         <a href="#" class="logo">S . M :)</a>
@@ -46,8 +50,8 @@
         <!-- sns 영역 -->
         <div class="sns">
             <a href="#"><i class='bx bxl-github'></i></a>
-            <a href="#"><i class='bx bxs-book' ></i></a>
-            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxs-book'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
         </div>
 
         <div class="home-img">
@@ -141,7 +145,40 @@
     <!-- 포트폴리오 영역 -->
     <section class="portfolio" id="portfolio">
         <h2 class="about-Title">My <span>Project</span></h2>
-        
+        <div class="project-container">
+            <div class="project-box">
+                <img src="./img/proj1.png" alt="">
+                <div class="project-layer">
+                    <h4>Up & Down</h4>
+                    <p>무한도전 니가가라 와이키키 특집 모티브해서 만든 게임 </p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="./img/proj2.png" alt="">
+                <div class="project-layer">
+                    <h4>To do List</h4>
+                    <p>기본 TodoList에서 이벤트 살짝 추가해 만든 TodoList</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="./img/proj3.png" alt="">
+                <div class="project-layer">
+                    <h4>뉴욕타임즈</h4>
+                    <p>NewsCatcher API활용해서 뉴욕타임즈 모티브해서 만든 뉴스</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="./img/proj4.png" alt="">
+                <div class="project-layer">
+                    <h4>봉주류</h4>
+                    <p>나만의 주류사이트를 만들어보고 싶어 만든 주류사이트(메인페이지)</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- footer 영역 -->
@@ -154,6 +191,8 @@
             <a href="#"><i class='bx bxs-chevrons-up'></i></a>
         </div>
     </footer>
-    <script src="./main.js"></script>    
+
+    <script src="https://unpkg.com/scrollreveal"></script>    
+    <script src="./main.js"></script>
 </body>
 </html>

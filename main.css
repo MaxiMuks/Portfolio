@@ -134,7 +134,7 @@ section {
     left: 0;
     width: 0;
     height: 100%;
-    border-right: 2px solid var(--main-color);
+    /* border-right: 2px solid var(--main-color); */
     z-index: -1;
     /* animation: homeCursorText 6s linear infinite;
     animation-delay: 2s; */
@@ -190,10 +190,11 @@ section {
 }
 
 .home-img img {
-    position: relative;
-    width: 55rem;
-    height: 70rem;
-    left: 50px;
+    /* position: relative; */
+    width: 40vw;
+    /* height: 70rem;
+    left: 50px; */
+    animation: floatImage 4s ease-in-out infinite;
 }
 
 /* about 영역 */
@@ -385,6 +386,88 @@ span {
     background-size: 100% 100vh;
 }
 
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.project-container .project-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem var(--main-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.project-box img {
+    width: 100%;
+    transition: .5s ease-in;
+}
+
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+.project-box .project-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.project-box:hover .project-layer {
+    transform: translateY(0);
+}
+
+.project-layer h4 {
+    font-size: 3rem;
+}
+
+.project-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.project-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.project-layer a i {
+    font-size: 2rem;
+    color: var(--second-gb-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* footer 부분 */
 .footer {
     background: url(./img/mainbg.jpg);
@@ -445,6 +528,31 @@ span {
     /* color: var(--main-color); */
 }
 
+/* 새로고침 gif */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: #fff no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-container img {
+    width: 35rem;
+}
+
+.loader-container .fade-out {
+    top: 110%;
+    opacity: 0;
+}
+
+
 /* 반응형 */
 @media(max-width: 1200px) {
     html {
@@ -454,19 +562,34 @@ span {
 
 @media(max-width: 991px) {
     .header {
-        padding: 2rem 4%;
+        padding: 2rem 3%;
     }
     section {
-        padding: 10rem 4% 2rem;
-    }
-    .home {
-        padding: 0 4%;
+        padding: 10rem 3% 2rem;
     }
     .footer {
-        padding: 2rem 4%;
+        padding: 2rem 3%;
     }
 }
 
+@media(max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--gb-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+}
 
 /* 글자 색 입혀주는 부분 */
 @keyframes homeBgText {
@@ -483,8 +606,8 @@ span {
         width: 0;
     }
 
-    65%, 78%, 85% {
-        width: 100%;
+    45%, 85% {
+        width: 92%;
         opacity: 1;
     }
 
@@ -499,29 +622,17 @@ span {
     }
 }
 
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);       
+    }
 
+    50% {
+        transform: translateY(-2.4rem);    
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    100% {
+        transform: translateY(0);    
+    }
+}
 
